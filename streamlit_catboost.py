@@ -2,7 +2,6 @@ import streamlit as st
 import pandas as pd
 import pickle
 
-
 # Cargar el modelo desde el archivo pickle
 with open('palladium_model_catboost_reducido.pkl', 'rb') as archivo:
     loaded_model = pickle.load(archivo)
