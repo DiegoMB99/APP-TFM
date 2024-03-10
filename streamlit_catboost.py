@@ -58,10 +58,11 @@ with st.container():
             else:
                 probabilidad = predeccion(DIA_ANIO_LLEGADA, NUM_MES_LLEGADA, TOP_PAIS_RESV, NUM_MES_FECHA_MOD)
                 st.write(f'**Esta reserva tiene una probabilidad del {probabilidad:.2%} de ser cancelada.**')
-                if probabilidad < 0.3:
-                    mensaje = "Recomendamos añadir al cliente un descuento en excursiones."
-                elif probabilidad < 0.6:
-                    mensaje = "Recomendamos añadir al cliente un '10%' de descuento en la reserva."
+                if probabilidad < 0.1:
+                    mensaje = "Ofrecer una mejora de habitación, con un descuento del 10% "
+                elif probabilidad < 0.3:
+                    mensaje = "Ofrecer un descuento en Spa y Restaurantes"
                 else:
-                    mensaje = "Alta probabilidad de cancelación, añadiendo automáticamente a la lista de churn."
-                st.write(f'**{mensaje}**')
+                    mensaje = " Ofrecer un descuento a la reserva del 20% "
+                
+            st.write(f'**{mensaje}**')
