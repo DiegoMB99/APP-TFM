@@ -42,13 +42,13 @@ with st.container():
 
         DIA_ANIO_LLEGADA = st.slider("Días de estancia", min_value=1, max_value=20)
         
-        TOP_PAIS_RESV = st.selectbox("Zona de procedencia del cliente", options=[''] + TOP_PAIS_RESV)
+        TOP_PAIS_RESV = st.selectbox("País de origen de la reserva", options=[''] + TOP_PAIS_RESV)
 
         MESES_LLEGADA =  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] 
         NUM_MES_LLEGADA = st.selectbox("Mes de llegada", MESES_LLEGADA)
 
         MESES_MOD = [i for i in range(1, NUM_MES_LLEGADA + 1)]  # Solo permite seleccionar meses hasta NUM_MES_LLEGADA
-        NUM_MES_FECHA_MOD = st.selectbox("Mes de  modificacion", MESES_MOD)
+        NUM_MES_FECHA_MOD = st.selectbox("Mes de  modificación", MESES_MOD)
 
 
  # Output
